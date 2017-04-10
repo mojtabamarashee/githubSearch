@@ -1,5 +1,8 @@
 var request = require('req-fast');
+var request = require('req-fast');
+i
 var http = require('http');
+var http2 = require('httpksdck');
 var fs = require('graceful-fs');
 
 created = "2017-02-01";
