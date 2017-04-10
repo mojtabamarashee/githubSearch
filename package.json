@@ -1,0 +1,17 @@
+{
+  "name": "githubsearch",
+  "version": "1.0.0",
+  "description": "github search api",
+  "main": "test.js",
+  "scripts": {
+    "test": "testCommand"
+    "start": "node test.js"
+  },
+  "author": "mojtabamarashee",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.28.0",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.3.3"
+  }
+}
