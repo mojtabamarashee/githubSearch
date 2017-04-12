@@ -15,8 +15,8 @@ StartServer();
 
 function callback(error, response) {
 	if (!error && response.statusCode == 200) {
-	
-	cntr++;
+
+		cntr++;
 		if(cntr == 10)
 			console.timeEnd('end');
 		var info = (response.body);
@@ -48,10 +48,10 @@ function callback(error, response) {
 console.time('end');
 var cntr = 0;
 /*for(i = 0; i < 10; i++)
-{
-	request(options, callback);
-}
-*/
+  {
+  request(options, callback);
+  }
+  */
 
 function StartServer()
 {
