@@ -1,44 +1,50 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<script src="./csripts/jquery-3.2.1.min.js" ></script>
 
 
 </head>
 <body>
-	<button onclick="SendAjax()">Click M</button>
-	<script>
-		alert('sscc')
-	</script>
-</body>
-
-
+<div id="test"> </div>
+<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
 <script>
+	function SendAjax()
+	{
 
-function SendAjax()
-{
+		created = '2017-02-01';
 
-	alert('ssss');
-	created = '2017-02-01';
-
-	url = 'https://api.github.com/search/repositories';
-	data= '?q=react+created:>' + created + '&sort=stars&order=desc&per_page=100'
+		url = 'https://api.github.com/search/repositories';
+		data= '?q=react+created:>' + created + '&sort=stars&order=desc&per_page=100'
 
 		url = 'https://api.github.com/search/repositories?q=tetris+language:assembly&sort=stars&order=desc'
-	alert(url + data);
-	$.ajax({
-		url: url,  
-		type:"GET",
-		success: function(data) {
-			alert(data);
-			//$(body).append(data);
-		},
-		error: function(){
-			alert('error');
-		}
-	});
-}
+		$.ajax({
+			url: url,  
+			dataType:'json',
+			type:"GET",
+			success: function(data) {
+				$("#test").append(data.total_count);
+				alert(data);
+				console.log("data = ", data);
+			},
+			error: function(){
+				alert('error');
+			}
+		});
+	}
 </script>
+
+
+
+
+
+
+<button onclick="SendAjax()">Click M</button>
+<script>
+</script>
+</body>
 
 
 
